@@ -39,7 +39,7 @@ fn main() {
     let grid_w = win_w as usize / scale;
     let grid_h = win_h as usize / scale;
     let mut gen_last = vec![vec![0; grid_w]; grid_h];
-    let mut gen_next = vec![vec![0; grid_w]; grid_h];
+    let mut gen_next = gen_last.clone();//vec![vec![0; grid_w]; grid_h];
 
     fn gen_default(gen: &mut Vec<Vec<usize>>) {
         let mut rng = thread_rng();
